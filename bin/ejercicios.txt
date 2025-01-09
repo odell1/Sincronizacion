@@ -1,0 +1,35 @@
+1. Bloque Sincronizado Básico:
+
+Crea una clase Contador con un método incrementar sincronizado.
+Crea varios hilos que incrementen el contador y asegúrate de que el resultado final sea correcto.
+
+2. Sincronización Estática:
+
+Crea una clase Banco con métodos estáticos sincronizados depositar y retirar.
+Simula varias cuentas bancarias y transacciones concurrentes.
+
+3. Objetos de Bloqueo (Lock Objects):
+
+Implementa una clase Almacen con métodos agregarProducto y retirarProducto utilizando ReentrantLock.
+Crea hilos productores y consumidores que interactúen con el almacén.
+
+4. Semáforos Básicos:
+
+Crea una clase Piscina con un semáforo que limite el número de personas que pueden entrar a la piscina al mismo tiempo.
+Simula varios hilos que intenten entrar y salir de la piscina.
+
+5. Productor-Consumidor con Semáforos:
+
+Implementa el problema del productor-consumidor utilizando semáforos para controlar el acceso a un buffer compartido.
+Crea hilos productores y consumidores que interactúen con el buffer.
+
+6. Lectores-Escritores:
+
+Implementa el problema de los lectores-escritores utilizando ReentrantReadWriteLock.
+Crea hilos lectores y escritores que accedan a un recurso compartido.
+
+7. Barbero Durmiente:
+
+Descripción del problema: En una barbería, hay un barbero y un número limitado de sillas para los clientes que esperan. Si no hay clientes, el barbero se duerme.
+ Cuando llega un cliente, debe despertar al barbero si está dormido. Si todas las sillas están ocupadas, el cliente se va. Implementa este problema utilizando semáforos para controlar el acceso a las sillas y la barbería.
+Ejercicio: Crea una clase Barberia con métodos para que los clientes entren y el barbero atienda. Utiliza semáforos para gestionar las sillas y la barbería. Crea hilos para los clientes y el barbero.
