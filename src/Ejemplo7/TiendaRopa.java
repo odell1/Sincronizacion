@@ -34,7 +34,8 @@ public class TiendaRopa {
             // Decidir si el cliente quiere probarse más ropa
             if (Math.random() > 0.5) {
                 System.out.println(cliente + " quiere probarse más ropa.");
-                usarProbador(cliente);
+                probadores.release();
+                usarProbador(cliente);///Ojete con esto!!!
             }
         } catch (InterruptedException e) {
             e.printStackTrace();

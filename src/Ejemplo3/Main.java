@@ -1,7 +1,8 @@
 package Ejemplo3;
 
 /*
- * Un método estático en Java es un método que pertenece a la clase en sí, en lugar de a una instancia específica de la clase. 
+ * Un método estático en Java es un método que pertenece a la clase en sí, 
+ * en lugar de a una instancia específica de la clase. 
  * Esto significa que puedes llamar a un método estático sin crear un objeto de la clase.
  * 
  * 
@@ -29,7 +30,7 @@ package Ejemplo3;
         try {
             hiloIncrementador1.join();
             hiloIncrementador2.join();
-            hiloDecrementador3.join();
+            hiloIncrementador3.join();
             hiloDecrementador1.join();
             hiloDecrementador2.join();
             hiloDecrementador3.join();

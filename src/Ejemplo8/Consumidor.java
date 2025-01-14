@@ -10,7 +10,7 @@ public class Consumidor implements Runnable {
     @Override
     public void run() {
         try {
-            for (int i = 0; i < 10; i++) {
+            for (int i = 0; i < 20; i++) {
                 almacen.consumir();
                 Thread.sleep((long) (Math.random() * 1000)); // Simula el tiempo de consumo
             }

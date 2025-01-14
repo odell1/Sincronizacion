@@ -1,7 +1,8 @@
 package Ejemplo2;
 
 /*
- * Bloque sincronizado. Al contario que el método sincronizado, son bloques de código. con los bloques es más ágil y menos bloqueante.
+ * Bloque sincronizado. Al contario que el método sincronizado, son bloques de código. con los bloques es más ágil 
+ * y menos bloqueante.
  * Prueba a comentar los bloques sincronizados.
  * 
  */

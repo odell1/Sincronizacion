@@ -2,7 +2,8 @@ package Ejemplo4;
 
 
 /*
- * Los objetos de bloqueo (Lock Objects) en Java proporcionan un mayor control sobre la sincronización que los bloques sincronizados tradicionales. 
+ * Los objetos de bloqueo (Lock Objects) en Java proporcionan un mayor control sobre la sincronización que los bloques
+ *  sincronizados tradicionales. 
  * La interfaz Lock en el paquete java.util.concurrent.locks permite bloquear y desbloquear explícitamente, lo que puede ser útil en situaciones más complejas.
  * Son por decir así, la versión mejorada de syncronized.
  */
