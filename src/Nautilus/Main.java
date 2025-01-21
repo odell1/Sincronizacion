@@ -5,18 +5,20 @@ public class Main {
         int grosorInicial = 10;
         Nautilus nautilus = new Nautilus(grosorInicial);
 
-        for (int i = 1; i <= 5; i++) {
-            Thread buzoRompeHielo = new Thread(new Buzo(nautilus, i, true));
-            buzoRompeHielo.start();
+        Thread[] buzos = new Thread[10];
+        for (int i = 0; i < 5; i++) {
+            buzos[i] = new Thread(new Buzo(nautilus, i + 1, true));
+            buzos[i].start();
         }
 
-        for (int i = 6; i <= 10; i++) {
-            Thread buzoEmpujaSubmarino = new Thread(new Buzo(nautilus, i, false));
-            buzoEmpujaSubmarino.start();
+        for (int i = 5; i < 10; i++) {
+            buzos[i] = new Thread(new Buzo(nautilus, i + 1, false));
+            buzos[i].start();
         }
 
-        //Inicia el temporizador
-        Thread temporizador = new Thread(new Temporizador(buzos, nautilusThread, 30000)); // 30 segundos
+        // Inicia el temporizador
+        Thread temporizador = new Thread(new Temporizador(buzos,30000)); //30 segundos
         temporizador.start();
-        }
+        
     }
+}

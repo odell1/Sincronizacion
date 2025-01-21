@@ -9,10 +9,10 @@ import java.util.concurrent.Semaphore;
 import java.util.Random;
 
 public class Nautilus {
-    private final Semaphore ticketRompeHielo = new Semaphore(2); // Solo 2 buzos pueden trabajar a la vez
+    private final Semaphore ticketRompeHielo = new Semaphore(2); //Solo 2 buzos pueden trabajar a la vez
     private final Semaphore ticketEmpujaSubmarino = new Semaphore(0);
     private int grosorHielo;
-    private int operacionesRompeHielo = 0; // Para que cuando lleguen a 3 hagan otra cosa
+    private int operacionesRompeHielo = 0; //Para que cuando lleguen a 3 hagan otra cosa
 
     public Nautilus(int grosorInicial) {
         this.grosorHielo = grosorInicial;
@@ -24,16 +24,16 @@ public class Nautilus {
             if (getGrosorHielo() > 0) {
                 System.out.println("Tripulante " + id + " está rompiendo el hielo.");
                 Random rand = new Random();
-                int tiempoRomper = rand.nextInt(3000) + 1000; // Tiempo aleatorio entre 1 y 4 segundos
-                Thread.sleep(tiempoRomper); // Simula el tiempo de romper el hielo
+                int tiempoRomper = rand.nextInt(3000) + 1000; //Tiempo aleatorio entre 1 y 4 segundos
+                Thread.sleep(tiempoRomper); //Simula el tiempo de romper el hielo
                 decrementarGrosorHielo();
                 incrementarOperacionesRompeHielo();
                 System.out.println("Tripulante " + id + " ha roto el hielo. Grosor restante: " + getGrosorHielo());
 
                 if (getOperacionesRompeHielo() >= 3) {
                     System.out.println("Tripulantes descansan y empujan el submarino.");
-                    ticketEmpujaSubmarino.release(3); // Permite que los tripulantes empujen el submarino
-                    resetOperacionesRompeHielo(); // Reinicia el contador de operaciones
+                    ticketEmpujaSubmarino.release(3); //Permite que los tripulantes empujen el submarino
+                    resetOperacionesRompeHielo(); //Reinicia el contador de operaciones
                     synchronized (this) {
                         notifyAll(); // Despierta a los tripulantes que empujan el submarino
                         wait(); // Los tripulantes que rompen el hielo esperan
