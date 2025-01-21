@@ -6,7 +6,8 @@ El submarino Nautilus, comandado por el Capitán Nemo, ha quedado atrapado bajo 
  Hay dos tipos de tareas que deben realizarse: romper el hielo y empujar el submarino. Ambas tareas deben coordinarse para asegurar el éxito del rescate. Si se está rompiendo 
  el hielo no puede empujar el submarino, son tareas distintas.
 
- Cuando se rompe el hielo van a estar al menos 3 submarinistas rompiendo el hielo un tiempo aleatorio, es decir, lo que les dure el oxígeno.
+ Cuando se rompe el hielo van a estar al menos 3 submarinistas rompiendo el hielo un tiempo aleatorio, es decir, lo que les dure el oxígeno. Pero solo tienen 2 bombonas de oxígeno, 
+ con lo que solo dos buzos van a poder trabajar. 
 
 Implementar un programa en Java que simule el rescate del Nautilus utilizando hilos y sincronización. Debes crear clases para representar a los miembros de la tripulación 
 que realizan las tareas de romper el hielo y empujar el submarino. Utiliza semáforos para coordinar las tareas y asegurar que se realicen en el orden correcto.
