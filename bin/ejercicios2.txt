@@ -1,0 +1,18 @@
+Ejercicios avanzados:
+
+1. 
+El submarino Nautilus, comandado por el Capitán Nemo, ha quedado atrapado bajo el hielo en el Polo Norte.
+ La tripulación debe trabajar en equipo para liberar el submarino antes de quedarse sin oxígeno.
+ Hay dos tipos de tareas que deben realizarse: romper el hielo y empujar el submarino. Ambas tareas deben coordinarse para asegurar el éxito del rescate. Si se está rompiendo 
+ el hielo no puede empujar el submarino, son tareas distintas.
+
+ Cuando se rompe el hielo van a estar al menos 3 submarinistas rompiendo el hielo un tiempo aleatorio, es decir, lo que les dure el oxígeno.
+
+Implementar un programa en Java que simule el rescate del Nautilus utilizando hilos y sincronización. Debes crear clases para representar a los miembros de la tripulación 
+que realizan las tareas de romper el hielo y empujar el submarino. Utiliza semáforos para coordinar las tareas y asegurar que se realicen en el orden correcto.
+
+Requisitos:
+Crear una clase Nautilus que contenga los métodos para romper el hielo y empujar el submarino.
+Crear clases RompeHielo y EmpujaSubmarino que implementen la interfaz Runnable y representen las tareas de romper el hielo y empujar el submarino, respectivamente.
+Utilizar semáforos para coordinar las tareas de manera que el submarino solo pueda ser empujado después de que se haya roto suficiente hielo.
+Crear un programa principal que inicie varios hilos para simular a los miembros de la tripulación realizando las tareas.
